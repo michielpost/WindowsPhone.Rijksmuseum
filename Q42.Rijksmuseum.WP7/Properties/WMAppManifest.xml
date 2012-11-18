@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Deployment xmlns="http://schemas.microsoft.com/windowsphone/2009/deployment" AppPlatformVersion="7.1">
+  <App xmlns="" ProductID="{234a1f28-8afb-4724-8829-94b8f114eeab}" Title="Rijkswidget" RuntimeType="Silverlight" Version="1.1.0.0" Genre="apps.normal" Author="Q42" Description="Rijkswidget" Publisher="Q42">
+    <IconPath IsRelative="true" IsResource="false">icon_99.png</IconPath>
+    <Capabilities>
+      <Capability Name="ID_CAP_NETWORKING" />
+    </Capabilities>
+    <Tasks>
+      <DefaultTask Name="_default" NavigationPage="MainPage.xaml" />
+    </Tasks>
+    <Tokens>
+      <PrimaryToken TokenID="Q42.Rijksmuseum.WP7Token" TaskName="_default">
+        <TemplateType5>
+          <BackgroundImageURI IsRelative="true" IsResource="false">icon_173.png</BackgroundImageURI>
+          <Count>0</Count>
+          <Title>Rijkswidget</Title>
+        </TemplateType5>
+      </PrimaryToken>
+    </Tokens>
+  </App>
+</Deployment>

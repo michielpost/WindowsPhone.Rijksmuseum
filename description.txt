@@ -1,0 +1,11 @@
+Rijkswidget
+
+Category: Entertainment
+Keywords, Rijksmuseum, museum, amsterdam
+
+Rijksmuseum Gadget
+
+Displays a daily art object from the Rijksmuseum.
+Information about the feautred object can be found by tapping on the image.
+
+The Rijksmuseum is located in Amsterdam, The Netherlands.
