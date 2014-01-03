@@ -107,7 +107,7 @@ namespace Q42.Rijksmuseum.WP7
         private void MoreInfoButton_Click(object sender, RoutedEventArgs e)
         {
             WebBrowserTask browser = new WebBrowserTask();
-            browser.URL = "http://www.rijksmuseum.nl" + _model.Link;
+            browser.URL = "https://www.rijksmuseum.nl/nl/zoeken?q=" + _model.ObjectId;
             browser.Show();
         }
 

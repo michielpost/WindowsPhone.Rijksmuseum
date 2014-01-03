@@ -13,6 +13,8 @@ using Microsoft.Phone.Controls;
 using System.Windows.Media.Imaging;
 using Q42.Rijksmuseum.WP7.Services;
 using Q42.Rijksmuseum.WP7.Services.Model;
+using Q42.RijksmuseumApi.Interfaces;
+using Q42.RijksmuseumApi;
 
 namespace Q42.Rijksmuseum.WP7
 {
@@ -92,13 +94,19 @@ namespace Q42.Rijksmuseum.WP7
             }
         }
 
-        void DataService_DataAvailable(Services.Model.RijksDataModel model)
+        async void DataService_DataAvailable(Services.Model.RijksDataModel model)
         {
             ModelUpdated(model);
 
             //Download and Save new image
             //http://rijksmuseum.nl/assetimage.jsp?id=SK-A-1610&widget/size260&r1969
-            string url = model.Path + model.ObjectId + "&widget/size260";
+            //string url = model.Path + model.ObjectId + "&widget/size260";
+
+          //Get image url
+            IRijksClient rijksClient = new RijksClient("EWkwIpWi");
+            var obj = await rijksClient.GetCollectionDetails(model.ObjectId);
+            var url = obj.ArtObject.WebImage.Url;
+            url = url.Replace("=s0", "=s720-c");
 
             imageService.Read(url);
         }

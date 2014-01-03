@@ -38,7 +38,7 @@ namespace Q42.Rijksmuseum.WP7.Services
             if (string.IsNullOrEmpty(lang))
                 lang = "en";
 
-            string url = "http://www.rijksmuseum.nl/data/widget3.jsp?lang=" + lang;
+            string url = "http://api.rijksmuseum.nl/data/widget3.jsp?lang=" + lang;
 
             HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(new Uri(url));
             request.BeginGetResponse(new AsyncCallback(ReadCallback), request);
