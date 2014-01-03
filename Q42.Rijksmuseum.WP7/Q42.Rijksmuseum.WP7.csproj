@@ -170,6 +170,9 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FlipCycleTileLarge.png" />
+    <Content Include="FlipCycleTileMedium.png" />
+    <Content Include="FlipCycleTileSmall.png" />
     <Content Include="icon_173.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
